@@ -33,6 +33,7 @@ exports.tokenParser = (content, clientId, debugMode) => {
     }
 
     return {
+        'token': accessToken,
         'X-Hasura-User-Id': userId,
         'X-Debug-Mode-Enabled': (debugMode || false).toString(),
         ...group,
